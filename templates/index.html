@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<title>A simple, clean, and responsive HTML invoice template</title>
+	<!--link rel="stylesheet" href="style.css"!-->
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+
+		body {
+			font-family: sans-serif;
+			line-height: 1.5;
+			font-size: 1rem;
+		}
+
+		#custom-header {
+			width: 100%;
+			border-collapse: collapse;
+		}
+
+		#custom-header td {
+			border: 1px solid #262626;
+			padding: 0.5rem 1rem;
+		}
+
+		#HEADER {
+			width: 100%;
+			padding: 1rem;
+			background-color: #E6EFFC;
+			margin-bottom: 1rem;
+		}
+
+		#HEADER table {
+			width: 100%;
+		}
+
+		#HEADER table td ul {
+			list-style-type: none;
+		}
+
+		#HEADER table td img {
+			width: 200px;
+		}
+
+		#HEADER table td:nth-child(2) {
+			width: -webkit-fit-content;
+			width: -moz-fit-content;
+			width: fit-content;
+			text-align: right;
+		}
+
+		header section {
+			font-size: 1rem;
+		}
+
+		/* *********************** */
+		main {
+			width: 100%;
+			background-color: #F4F5F7;
+			text-align: justify;
+			padding: 1rem;
+		}
+
+		/* *********************** */
+		footer {
+			width: 100%;
+			font-size: 1rem;
+			color: #262626;
+			text-align: right;
+			margin-top: 1rem;
+		}
+
+		#custom-footer {
+			width: 100%;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+		}
+
+		#custom-footer table {
+			width: 100%;
+			height: 50px;
+		}
+
+		#custom-footer table td {
+			text-align: center;
+		}
+
+		#custom-footer table td:nth-child(2) {
+			width: 20px;
+		}
+
+		#custom-footer table td span {
+			display: block;
+			width: 100%;
+			height: 1px;
+			background-color: #262626;
+		}
+
+		#custom-footer table td span:nth-child(1) {
+			float: right;
+		}
+	</style>
+</head>
+
+<body>
+	<!-- HEADER -->
+	<section id="HEADER">
+		<table>
+			<tr>
+				<td>
+					<img src="https://www.referenseo.com/wp-content/uploads/2019/03/image-attractive-960x540.jpg">
+				</td>
+				<td>
+					<ul>
+						<li>Invoice #: 123</li>
+						<li>Created: January 1, 2015</li>
+						<li>Due: February 1, 2015</li>
+					</ul>
+				</td>
+			</tr>
+		</table>
+	</section>
+
+
+	<!-- MAIN CONTENT -->
+	<main>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam sit velit tempora ex. Ratione, excepturi modi aut cumque, illo nobis, impedit repellat sunt aspernatur qui sint quod
+			veritatis
+			quaerat dolores maiores quae! Quae quisquam explicabo sit, assumenda, beatae eum alias ducimus tenetur iure laboriosam commodi repellendus aspernatur quam doloribus et iusto rem
+			omnis!
+			Asperiores soluta odit numquam quisquam optio exercitationem illum, libero quidem vitae nesciunt! Pariatur.</p>
+	</main>
+
+
+	<!-- FOOTER -->
+	<footer>
+		<h3>{{footerContent.companyName}}</h3>
+		<p>{{footerContent.signature}}</p>
+		<ul>
+			<!-- RENDERING DYNAMIC DATA -->
+			<li>{{footerContent.email}}</li>
+			<li>{{footerContent.phoneNumber}}</li>
+		</ul>
+
+	</footer>
+</body>
+
+</html>
